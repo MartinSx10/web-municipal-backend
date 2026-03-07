@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "avisos",
+  "info": {
+    "singularName": "aviso",
+    "pluralName": "avisos",
+    "displayName": "aviso"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "message": {
+      "type": "richtext"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "variant": {
+      "type": "enumeration",
+      "enum": [
+        "info,",
+        "warning"
+      ]
+    },
+    "linkText": {
+      "type": "string"
+    },
+    "linkUrl": {
+      "type": "string"
+    }
+  }
+}

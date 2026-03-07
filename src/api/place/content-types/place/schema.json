@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "places",
+  "info": {
+    "singularName": "place",
+    "pluralName": "places",
+    "displayName": "lugar"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "valores": {
+      "type": "enumeration",
+      "enum": [
+        "naturaleza",
+        "cultura",
+        "eventos",
+        "gastronomía",
+        "alojamiento"
+      ]
+    },
+    "excerpt": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "cover": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "mapsUrl": {
+      "type": "string"
+    }
+  }
+}
