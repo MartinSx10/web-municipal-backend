@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "service"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "internal",
+        "external",
+        "phone",
+        "whatsapp"
+      ]
+    },
+    "url": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "active": {
+      "type": "boolean"
+    }
+  }
+}

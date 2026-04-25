@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "emergencies",
+  "info": {
+    "singularName": "emergency",
+    "pluralName": "emergencies",
+    "displayName": "emergency"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "phone",
+        "whatsapp",
+        "link"
+      ]
+    },
+    "url": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "active": {
+      "type": "boolean"
+    }
+  }
+}
