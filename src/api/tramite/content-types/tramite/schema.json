@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tramites",
+  "info": {
+    "singularName": "tramite",
+    "pluralName": "tramites",
+    "displayName": "tramites"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "excerpt": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "place": {
+      "type": "string"
+    },
+    "schedule": {
+      "type": "string"
+    },
+    "needsAppointment": {
+      "type": "boolean"
+    },
+    "modality": {
+      "type": "enumeration",
+      "enum": [
+        "presencial",
+        "online",
+        "mixto"
+      ]
+    },
+    "primaryLabel": {
+      "type": "string"
+    },
+    "primaryUrl": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "richtext"
+    }
+  }
+}

@@ -631,6 +631,47 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiTramiteTramite extends Struct.CollectionTypeSchema {
+  collectionName: 'tramites';
+  info: {
+    displayName: 'tramites';
+    pluralName: 'tramites';
+    singularName: 'tramite';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    active: Schema.Attribute.Boolean;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    excerpt: Schema.Attribute.Text;
+    icon: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::tramite.tramite'
+    > &
+      Schema.Attribute.Private;
+    modality: Schema.Attribute.Enumeration<['presencial', 'online', 'mixto']>;
+    needsAppointment: Schema.Attribute.Boolean;
+    notes: Schema.Attribute.RichText;
+    order: Schema.Attribute.Integer;
+    place: Schema.Attribute.String;
+    primaryLabel: Schema.Attribute.String;
+    primaryUrl: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    schedule: Schema.Attribute.String;
+    slug: Schema.Attribute.UID<'title'>;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1148,6 +1189,7 @@ declare module '@strapi/strapi' {
       'api::news.news': ApiNewsNews;
       'api::place.place': ApiPlacePlace;
       'api::service.service': ApiServiceService;
+      'api::tramite.tramite': ApiTramiteTramite;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
